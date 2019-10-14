@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CIBUS - Hospital Episcopal San Lucas</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="user_info_header">User Information</string>
+    <string name="server_info_header">Server Information</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="server_name">Hostname</string>
+    <string name="registration_mode">Registration Mode</string>
+    <string name="NU_EMPLEADO">Employee Number</string>
+    <string name="login">Login</string>
+    <string name="scan_finger">Scan finger</string>
+    <string name="scan_pin">Scan PIN</string>
+    <string name="scanned_fingerprint">Scanned fingerprint</string>
+
+</resources>

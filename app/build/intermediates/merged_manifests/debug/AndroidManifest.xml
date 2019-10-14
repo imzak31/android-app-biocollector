@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.orsys.agorabiocollector"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="29" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.orsys.agorabiocollector.LoginActivity"
+            android:label="@string/login" >
+        </activity>
+        <activity
+            android:name="com.orsys.agorabiocollector.HomeActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.orsys.agorabiocollector.ScanActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name="com.orsys.agorabiocollector.PINActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name="com.orsys.agorabiocollector.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.esafirm.imagepicker.features.ImagePickerActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/ef_AppTheme" />
+
+        <provider
+            android:name="com.esafirm.imagepicker.helper.ImagePickerFileProvider"
+            android:authorities="com.orsys.agorabiocollector.imagepicker.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/image_picker_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>
